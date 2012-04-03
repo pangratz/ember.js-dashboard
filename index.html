@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8" ></script>
+		<script src="js/ember-0.9.6.min.js" type="text/javascript" charset="utf-8" ></script>
+		<script src="js/app.js" type="text/javascript" charset="utf-8" ></script>
+	</head>
+	<body>
+		<script type="text/x-handlebars" data-template-name="recentTweets" >
+			{{#each tweets tagName="ul"}}
+				<li>{{text}}</li>
+			{{/each}}
+		</script>
+	</body>
+</html>
