@@ -1,14 +1,42 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/ember-0.9.6.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/app.js" type="text/javascript" charset="utf-8" ></script>
 	</head>
 	<body>
-		<script type="text/x-handlebars" data-template-name="recentTweets" >
+		<script type="text/x-handlebars" data-template-name="tweets" >
 			{{#each tweets tagName="ul"}}
 				<li>{{text}}</li>
 			{{/each}}
 		</script>
+		
+		<script type="text/x-handlebars" data-template-name="questions" >
+			{{#each questions tagName="ul" }}
+				<li><a {{bindAttr href="link"}} >{{title}}</a></li>
+			{{/each}}
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="github" >
+			{{#each events tagName="ul" }}
+				<li>{{actor.login}} {{type}} {{log payload}}</li>
+			{{/each}}
+		</script>
+		
+		<div class="container-fluid">
+		  <div class="row-fluid">
+		    <div class="span3 tweets">
+		      Tweets
+		    </div>
+		    <div class="span4 github">
+		      GitHub Events
+		    </div>
+		    <div class="span4 stackoverflow">
+		      StackOverflow questions
+		    </div>
+		  </div>
+		</div>
 	</body>
 </html>
