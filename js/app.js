@@ -21,7 +21,7 @@ DB.githubEventsController = Ember.ArrayProxy.create({
     content: [],
     loadLatestEvents: function() {
         var that = this;
-        Ember.$.getJSON('https://api.github.com/repos/emberjs/ember.js/events?per_page=100&callback=?',
+        Ember.$.getJSON('https://api.github.com/repos/emberjs/ember.js/events?page=1&per_page=100&callback=?',
         function(data) {
             that.pushObjects(data.data);
         });
