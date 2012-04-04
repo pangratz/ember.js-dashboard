@@ -17,6 +17,30 @@ DB = Ember.Application.create({
     }
 });
 
+DB.ActorView = Ember.View.extend({
+    tagName: 'a',
+    attributeBindings: 'href'.w(),
+    href: function() {
+        return 'https://github.com/%@'.fmt(Ember.getPath(this, 'actor.login'));
+    }.property('actor.login'),
+    template: Ember.Handlebars.compile('{{actor.login}}')
+});
+
+DB.EventView = Ember.View.extend({
+    templateName: function() {
+        var type = Ember.getPath(this, 'event.type');
+        var templateName = '%@-template'.fmt(type);
+        if (Ember.TEMPLATES[templateName]) {
+            return templateName;
+        }
+        return 'event-template';
+    }.property('event.type').cacheable(),
+
+    _templateNameChanged: function() {
+        this.rerender();
+    }.observes('templateName')
+});
+
 DB.githubEventsController = Ember.ArrayProxy.create({
     content: [],
     loadLatestEvents: function() {

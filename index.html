@@ -21,8 +21,50 @@
 		
 		<script type="text/x-handlebars" data-template-name="github" >
 			{{#each events tagName="ul" }}
-				<li>{{actor.login}} {{type}} {{log payload}}</li>
+			  {{view DB.EventView tagName="li" eventBinding="this" }}
 			{{/each}}
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="event-template" >
+			{{view DB.ActorView actorBinding="event.actor"}}: {{event.type}}
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="CommitCommentEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}} commented on commit
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="IssuesEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}}
+			{{event.payload.action}} issue <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="ForkEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}} forked repo
+			<a {{bindAttr href="event.payload.forkee.html_url"}}>{{event.actor.login}}/{{event.payload.forkee.name}}</a>
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="PushEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}} pushed to <a href="https://github.com/emberjs/ember.js/commit/{{unbound event.payload.head}}">{{event.payload.ref}}</a>
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="PullRequestEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}} {{event.payload.action}} Pull Request <a {{bindAttr href="event.payload.pull_request.html_url"}}>#{{event.payload.number}}</a>
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="GollumEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}} modified the <a href="https://github.com/emberjs/ember.js/wiki">wiki</a> <br/>
+			{{#each event.payload.pages }}
+			  <span>{{action}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
+			{{/each}}
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="WatchEvent-template" >
+			{{view DB.ActorView actorBinding="event.actor"}} {{event.payload.action}} watching
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="IssueCommentEvent-template" >
+		  {{view DB.ActorView actorBinding="event.actor"}} commented on
+		  issue <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>: {{event.payload.issue.title}}
 		</script>
 		
 		<div class="container-fluid">
