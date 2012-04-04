@@ -9,7 +9,7 @@
 	<body>
 		<script type="text/x-handlebars" data-template-name="tweets" >
 			{{#each tweets tagName="ul"}}
-				<li><b>{{from_user}}</b> {{text}}</li>
+				<li><b><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id}}">@{{from_user}}</a></b> {{text}}</li>
 			{{/each}}
 		</script>
 		

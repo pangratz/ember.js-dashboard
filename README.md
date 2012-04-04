@@ -1,1 +1,1 @@
-Ember.js dashoard
+Ember.js dashboard
