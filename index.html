@@ -8,12 +8,14 @@
 		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/ember-0.9.6.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/twitter-text-1.4.16.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moment.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/app.js" type="text/javascript" charset="utf-8" ></script>
 	</head>
 	<body>
 		<script type="text/x-handlebars" data-template-name="tweets" >
 			<ul class="unstyled timeline">
 				{{#each tweets}}
+					{{ago "created_at"}}:
 					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id_str}}">@{{from_user}}</a></strong> {{parseTweet}}</li>
 				{{/each}}
 			</ul>
@@ -22,6 +24,7 @@
 		<script type="text/x-handlebars" data-template-name="questions" >
 			<ul class="unstyled timeline">
 				{{#each questions}}
+				  {{ago "last_activity_date" isSeconds=true}}
 					<li>{{score}}/{{answer_count}} <a {{bindAttr href="link"}} >{{{title}}}</a></li>
 				{{/each}}
 			</ul>
@@ -30,6 +33,7 @@
 		<script type="text/x-handlebars" data-template-name="github" >
 			<ul class="unstyled timeline">
 				{{#each events}}
+					{{ago "created_at"}}:
 					{{view DB.EventView tagName="li" eventBinding="this" }}
 				{{/each}}
 			</ul>
