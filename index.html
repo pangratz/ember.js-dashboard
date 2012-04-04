@@ -18,6 +18,8 @@
 				{{#each tweets}}
 					{{ago "created_at"}}:
 					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id_str}}">@{{from_user}}</a></strong> {{parseTweet}}</li>
+				{{else}}
+					loading latest tweets ...
 				{{/each}}
 			</ul>
 		</script>
@@ -27,6 +29,8 @@
 				{{#each questions}}
 				  {{ago "last_activity_date" isSeconds=true}}
 					<li>{{score}}/{{answer_count}} <a {{bindAttr href="link"}} >{{{title}}}</a></li>
+				{{else}}
+					loading latest questions on StackOverflow ...
 				{{/each}}
 			</ul>
 		</script>
@@ -36,6 +40,8 @@
 				{{#each events}}
 					{{ago "created_at"}}:
 					{{view DB.EventView tagName="li" eventBinding="this" }}
+				{{else}}
+					loading latest events on GitHub
 				{{/each}}
 			</ul>
 		</script>
