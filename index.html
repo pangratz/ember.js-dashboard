@@ -7,13 +7,14 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
 		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/ember-0.9.6.min.js" type="text/javascript" charset="utf-8" ></script>
+		<script src="js/twitter-text-1.4.16.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/app.js" type="text/javascript" charset="utf-8" ></script>
 	</head>
 	<body>
 		<script type="text/x-handlebars" data-template-name="tweets" >
 			<ul class="unstyled timeline">
 				{{#each tweets}}
-					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id_str}}">@{{from_user}}</a></strong> {{text}}</li>
+					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id_str}}">@{{from_user}}</a></strong> {{parseTweet}}</li>
 				{{/each}}
 			</ul>
 		</script>

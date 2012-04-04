@@ -1,5 +1,11 @@
 Ember.Handlebars.registerHelper('echo', function(propertyName, options) {
-    return Ember.getPath( options.contexts[0], propertyName );
+    return Ember.getPath(options.contexts[0], propertyName);
+});
+
+Ember.Handlebars.registerHelper('parseTweet', function(options) {
+    var tweet = options.contexts[0].text;
+    var parsed = twttr.txt.autoLink(tweet);
+    return new Handlebars.SafeString(parsed);
 });
 
 DB = Ember.Application.create({
