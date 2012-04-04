@@ -1,3 +1,7 @@
+div.container-fluid > h1 {
+  color: #CD4F1A;
+}
+
 li {
   background-color: #F7F7F9;
   -webkit-border-radius: 5px;
