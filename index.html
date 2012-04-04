@@ -13,7 +13,7 @@
 		<script type="text/x-handlebars" data-template-name="tweets" >
 			<ul class="unstyled timeline">
 				{{#each tweets}}
-					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id}}">@{{from_user}}</a></strong> {{text}}</li>
+					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id_str}}">@{{from_user}}</a></strong> {{text}}</li>
 				{{/each}}
 			</ul>
 		</script>
