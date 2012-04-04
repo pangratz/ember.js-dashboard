@@ -54,7 +54,7 @@
 		<script type="text/x-handlebars" data-template-name="GollumEvent-template" >
 			{{view DB.ActorView actorBinding="event.actor"}} modified the <a href="https://github.com/emberjs/ember.js/wiki">wiki</a> <br/>
 			{{#each event.payload.pages }}
-			  <span>{{action}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
+			  <span>{{echo "action"}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
 			{{/each}}
 		</script>
 		
