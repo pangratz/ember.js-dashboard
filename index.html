@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen"  charset="utf-8">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
 		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/ember-0.9.6.min.js" type="text/javascript" charset="utf-8" ></script>
 		<script src="js/app.js" type="text/javascript" charset="utf-8" ></script>
 	</head>
 	<body>
 		<script type="text/x-handlebars" data-template-name="tweets" >
-			{{#each tweets tagName="ul"}}
-				<li><b><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id}}">@{{from_user}}</a></b> {{text}}</li>
-			{{/each}}
+			<ul class="unstyled timeline">
+				{{#each tweets}}
+					<li><strong><a href="http://twitter.com/#!/{{unbound from_user}}/status/{{unbound id}}">@{{from_user}}</a></strong> {{text}}</li>
+				{{/each}}
+			</ul>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="questions" >
-			{{#each questions tagName="ul" }}
-				<li>{{score}}/{{answer_count}} <a {{bindAttr href="link"}} >{{{title}}}</a></li>
-			{{/each}}
+			<ul class="unstyled timeline">
+				{{#each questions}}
+					<li>{{score}}/{{answer_count}} <a {{bindAttr href="link"}} >{{{title}}}</a></li>
+				{{/each}}
+			</ul>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="github" >
-			{{#each events tagName="ul" }}
-			  {{view DB.EventView tagName="li" eventBinding="this" }}
-			{{/each}}
+			<ul class="unstyled timeline">
+				{{#each events}}
+					{{view DB.EventView tagName="li" eventBinding="this" }}
+				{{/each}}
+			</ul>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="event-template" >
@@ -54,7 +61,7 @@
 		<script type="text/x-handlebars" data-template-name="GollumEvent-template" >
 			{{view DB.ActorView actorBinding="event.actor"}} modified the <a href="https://github.com/emberjs/ember.js/wiki">wiki</a> <br/>
 			{{#each event.payload.pages }}
-			  <span>{{echo "action"}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
+				<span>{{echo "action"}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
 			{{/each}}
 		</script>
 		
@@ -63,22 +70,23 @@
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="IssueCommentEvent-template" >
-		  {{view DB.ActorView actorBinding="event.actor"}} commented on
-		  issue <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>: {{event.payload.issue.title}}
+			{{view DB.ActorView actorBinding="event.actor"}} commented on
+			issue <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>: {{event.payload.issue.title}}
 		</script>
 		
 		<div class="container-fluid">
-		  <div class="row-fluid">
-		    <div class="span3 tweets">
-		      <a href="http://twitter.com/#!/search/realtime/emberjs">Tweets</a>
-		    </div>
-		    <div class="span4 github">
-		      <a href="https://github.com/emberjs/ember.js">GitHub Events</a>
-		    </div>
-		    <div class="span4 stackoverflow">
-		      <a href="http://stackoverflow.com/questions/tagged/emberjs">StackOverflow questions</a>
-		    </div>
-		  </div>
+			<h1>Ember.js Dashboard</h1>
+			<div class="row-fluid">
+				<div class="span3 tweets">
+					<h2><a href="http://twitter.com/#!/search/realtime/emberjs">Twitter</a></h2>
+				</div>
+				<div class="span4 github">
+					<h2><a href="https://github.com/emberjs/ember.js">GitHub</a></h2>
+				</div>
+				<div class="span4 stackoverflow">
+					<h2><a href="http://stackoverflow.com/questions/tagged/emberjs">StackOverflow</a></h2>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
