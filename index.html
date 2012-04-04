@@ -30,7 +30,7 @@
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="CommitCommentEvent-template" >
-			{{view DB.ActorView actorBinding="event.actor"}} commented on commit
+			{{view DB.ActorView actorBinding="event.actor"}} commented on <a {{bindAttr href="event.payload.comment.html_url"}}>commit</a>
 		</script>
 		
 		<script type="text/x-handlebars" data-template-name="IssuesEvent-template" >
