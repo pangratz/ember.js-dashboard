@@ -100,7 +100,7 @@
 		
 		<script type="text/x-handlebars" data-template-name="IssueCommentEvent-template" >
 			{{view DB.ActorView actorBinding="event.actor"}} commented on
-			issue <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>: {{event.payload.issue.title}}
+			issue <a href="{{unbound event.payload.issue.html_url}}#issuecomment-{{unbound event.payload.comment.id}}">#{{event.payload.issue.number}}</a>: {{event.payload.issue.title}}
 		</script>
 		
 		<div class="container-fluid">
