@@ -13,6 +13,21 @@
 	</head>
 	<body>
 		<a href="https://github.com/pangratz/ember.js-dashboard"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
+		
+		<script type="text/x-handlebars" data-template-name="reddit" >
+			<ul class="unstyled timeline">
+				{{#each entries}}
+					{{ago "created_utc" isSeconds=true}}:
+					<li>
+						<i class="icon-chevron-up" ></i>{{ups}} -
+						<strong>{{author}}</a></strong> <a {{bindAttr href="url"}} >{{title}}</a>
+					</li>
+				{{else}}
+					loading latest reddit entries ...
+				{{/each}}
+			</ul>
+		</script>
+		
 		<script type="text/x-handlebars" data-template-name="tweets" >
 			<ul class="unstyled timeline">
 				{{#each tweets}}
@@ -94,11 +109,14 @@
 				<div class="span3 tweets">
 					<h2><a href="http://twitter.com/#!/search/realtime/emberjs">Twitter</a></h2>
 				</div>
-				<div class="span4 github">
+				<div class="span3 github">
 					<h2><a href="https://github.com/emberjs/ember.js">GitHub</a></h2>
 				</div>
-				<div class="span4 stackoverflow">
+				<div class="span3 stackoverflow">
 					<h2><a href="http://stackoverflow.com/questions/tagged/emberjs">StackOverflow</a></h2>
+				</div>
+				<div class="span3 reddit">
+					<h2><a href="http://www.reddit.com/r/emberjs/">r/emberjs</a></h2>
 				</div>
 			</div>
 		</div>

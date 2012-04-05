@@ -1,14 +1,17 @@
-Ember.Handlebars.registerHelper('echo', function(propertyName, options) {
+Ember.Handlebars.registerHelper('echo',
+function(propertyName, options) {
     return Ember.getPath(options.contexts[0], propertyName);
 });
 
-Ember.Handlebars.registerHelper('parseTweet', function(options) {
+Ember.Handlebars.registerHelper('parseTweet',
+function(options) {
     var tweet = options.contexts[0].text;
     var parsed = twttr.txt.autoLink(tweet);
     return new Handlebars.SafeString(parsed);
 });
 
-Ember.Handlebars.registerHelper('ago', function(propertyName, options) {
+Ember.Handlebars.registerHelper('ago',
+function(propertyName, options) {
     var timestamp = Ember.getPath(options.contexts[0], propertyName);
     if (options.hash.isSeconds) {
         // the given property represents seconds since UNIX epoch, so we multiply
@@ -34,6 +37,11 @@ DB = Ember.Application.create({
             eventsBinding: 'DB.githubEventsController',
             templateName: 'github'
         }).appendTo('.github');
+
+        Ember.View.create({
+            entriesBinding: 'DB.redditController',
+            templateName: 'reddit'
+        }).appendTo('.reddit');
     }
 });
 
@@ -59,6 +67,17 @@ DB.EventView = Ember.View.extend({
     _templateNameChanged: function() {
         this.rerender();
     }.observes('templateName')
+});
+
+DB.redditController = Ember.ArrayProxy.create({
+    content: [],
+    loadLatestEntries: function() {
+        var that = this;
+        Ember.$.getJSON('http://www.reddit.com/r/emberjs/new.json?sort=new&jsonp=?',
+        function(response) {
+            that.pushObjects(response.data.children.getEach('data'));
+        });
+    }
 });
 
 DB.githubEventsController = Ember.ArrayProxy.create({
@@ -97,3 +116,4 @@ DB.tweetsController = Ember.ArrayProxy.create({
 DB.githubEventsController.loadLatestEvents();
 DB.tweetsController.loadLatestTweets();
 DB.questionsController.loadLatestQuestions();
+DB.redditController.loadLatestEntries();
