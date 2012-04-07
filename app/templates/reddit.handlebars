@@ -2,8 +2,9 @@
   {{#each entries}}
     {{ago "created_utc" isSeconds=true}}:
     <li>
-      <i class="icon-chevron-up" ></i>{{ups}} -
-      <strong>{{author}}</a></strong> <a {{bindAttr href="url"}} >{{title}}</a>
+      <a href="http://www.reddit.com{{unbound permalink}}"><i class="icon-chevron-up" title="upvotes" ></i>{{ups}}</a> -
+      <strong>{{author}}</strong>
+      <a {{bindAttr href="url"}} >{{title}}</a>
     </li>
   {{else}}
     loading latest reddit entries ...
