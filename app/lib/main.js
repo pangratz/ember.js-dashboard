@@ -51,19 +51,19 @@ Dashboard.redditController.loadLatestEntries();
 Ember.View.create({
     tweetsBinding: 'Dashboard.tweetsController',
     templateName: 'dashboard/~templates/tweets'
-}).appendTo('.tweets');
+}).replaceIn('.tweets');
 
 Ember.View.create({
     questionsBinding: 'Dashboard.questionsController',
     templateName: 'dashboard/~templates/questions'
-}).appendTo('.stackoverflow');
+}).replaceIn('.stackoverflow');
 
 Ember.View.create({
     eventsBinding: 'Dashboard.githubEventsController',
     templateName: 'dashboard/~templates/github'
-}).appendTo('.github');
+}).replaceIn('.github');
 
 Ember.View.create({
     entriesBinding: 'Dashboard.redditController',
     templateName: 'dashboard/~templates/reddit'
-}).appendTo('.reddit');
+}).replaceIn('.reddit');

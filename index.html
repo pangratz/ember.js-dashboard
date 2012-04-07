@@ -4,11 +4,6 @@
 		<title>Ember.js Dashboard</title>
 
 		<link rel="stylesheet" href="assets/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<script src="assets/loader.js" type="text/javascript" charset="utf-8"></script>
-		<script src="assets/app.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-	    loader.require('dashboard/main');
-	  </script>
 	</head>
 	<body>
 		<a href="https://github.com/pangratz/ember.js-dashboard">
@@ -17,19 +12,28 @@
 		<div class="container-fluid">
 			<h1>Ember.js Dashboard</h1>
 			<div class="row-fluid">
-				<div class="span3 tweets">
+				<div class="span3">
 					<h2><a href="http://twitter.com/#!/search/realtime/emberjs">Twitter</a></h2>
+					<div class="tweets" >loading latest Tweets ...</div>
 				</div>
-				<div class="span3 github">
+				<div class="span3">
 					<h2><a href="https://github.com/emberjs/ember.js">GitHub</a></h2>
+					<div class="github" >loading latest GitHub events ...</div>
 				</div>
-				<div class="span3 stackoverflow">
+				<div class="span3">
 					<h2><a href="http://stackoverflow.com/questions/tagged/emberjs">StackOverflow</a></h2>
+					<div class="stackoverflow" >loading latest StackOverflow questions ...</div>
 				</div>
-				<div class="span3 reddit">
+				<div class="span3">
 					<h2><a href="http://www.reddit.com/r/emberjs/">r/emberjs</a></h2>
+					<div class="reddit" >loading latest reddit entries ...</div>
 				</div>
 			</div>
 		</div>
+		<script src="assets/loader.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+	    loader.require('dashboard/main');
+	  </script>
 	</body>
 </html>
