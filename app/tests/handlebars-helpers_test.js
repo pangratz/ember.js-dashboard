@@ -1,7 +1,7 @@
 require('dashboard/core');
 require('dashboard/handlebars-helpers');
 
-module("handlebars-helpers - echo");
+module("{{echo}}");
 
 test("helper is available",
 function() {
@@ -24,7 +24,7 @@ function() {
     equal(Ember.$('#qunit-fixture').text(), "dingdong", "echo helper outputs correct value");
 });
 
-module("handlebars-helpers - ago");
+module("{{ago}}");
 
 test("helper is available",
 function() {
@@ -74,7 +74,7 @@ function() {
     equal(Ember.$('#qunit-fixture').text(), "a few seconds ago", "ago helper outputs correct value");
 });
 
-module("handlebars-helpers - parseTweet");
+module("{{parseTweet}}");
 
 test("helper is available",
 function() {
