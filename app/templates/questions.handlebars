@@ -6,7 +6,7 @@
         <strong>{{score}}</strong> <i class="icon-chevron-up" title="upvotes" ></i> /
         <strong>{{answer_count}}</strong> <i class="icon-comment" title="answers" ></i> - 
         <a {{bindAttr href="link"}} >{{{title}}}</a>
-        {{#if is_answered}}
+        {{#if accepted_answer_id}}
           <i class="icon-ok" title="answered" ></i>
         {{/if}}
       </div>
