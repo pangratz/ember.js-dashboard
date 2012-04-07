@@ -26,6 +26,7 @@ task :deploy do
     `git commit -m 'Site updated at #{Time.now.utc}'`
     `git push -f origin gh-pages`
   end
+  `rm -rf build`
 end
 
 desc "Run tests with PhantomJS"
