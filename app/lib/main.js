@@ -27,22 +27,22 @@ DB = Ember.Application.create({
     ready: function() {
         Ember.View.create({
             tweetsBinding: 'DB.tweetsController',
-            templateName: 'tweets'
+            templateName: 'dashboard/~templates/tweets'
         }).appendTo('.tweets');
 
         Ember.View.create({
             questionsBinding: 'DB.questionsController',
-            templateName: 'questions'
+            templateName: 'dashboard/~templates/questions'
         }).appendTo('.stackoverflow');
 
         Ember.View.create({
             eventsBinding: 'DB.githubEventsController',
-            templateName: 'github'
+            templateName: 'dashboard/~templates/github'
         }).appendTo('.github');
 
         Ember.View.create({
             entriesBinding: 'DB.redditController',
-            templateName: 'reddit'
+            templateName: 'dashboard/~templates/reddit'
         }).appendTo('.reddit');
     }
 });
@@ -59,11 +59,7 @@ DB.ActorView = Ember.View.extend({
 DB.EventView = Ember.View.extend({
     templateName: function() {
         var type = Ember.getPath(this, 'event.type');
-        var templateName = '%@-template'.fmt(type);
-        if (Ember.TEMPLATES[templateName]) {
-            return templateName;
-        }
-        return 'event-template';
+        return 'dashboard/~templates/%@-template'.fmt(type);
     }.property('event.type').cacheable(),
 
     _templateNameChanged: function() {

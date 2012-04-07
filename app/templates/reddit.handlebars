@@ -1,0 +1,11 @@
+<ul class="unstyled timeline">
+  {{#each entries}}
+    {{ago "created_utc" isSeconds=true}}:
+    <li>
+      <i class="icon-chevron-up" ></i>{{ups}} -
+      <strong>{{author}}</a></strong> <a {{bindAttr href="url"}} >{{title}}</a>
+    </li>
+  {{else}}
+    loading latest reddit entries ...
+  {{/each}}
+</ul>
