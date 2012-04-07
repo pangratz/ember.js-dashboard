@@ -43,5 +43,5 @@ function() {
         view.appendTo('#qunit-fixture');
     });
 
-    equal(view.get('templateName'), 'dashboard/~templates/CommitCommentEvent-template', "returns template for given event type");
+    equal(view.get('templateName'), 'dashboard/~templates/github/CommitCommentEvent-template', "returns template for given event type");
 });
