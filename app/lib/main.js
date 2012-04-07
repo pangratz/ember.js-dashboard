@@ -1,17 +1,53 @@
 require('dashboard/core');
 require('dashboard/controllers');
 require('dashboard/views');
+require('dashboard/datasource');
 
-Dashboard.redditController = Dashboard.RedditController.create();
-Dashboard.githubEventsController = Dashboard.GitHubController.create();
-Dashboard.questionsController = Dashboard.StackOverflowController.create();
-Dashboard.tweetsController = Dashboard.TwitterController.create();
+if (window.location.search.indexOf('fixtures') !== -1) {
+    Dashboard.dataSource = Dashboard.DataSource.create({
+        getLatestTweets: function(callback) {
+            this.getJSON('twitter.json', callback);
+        },
+        getLatestGitHubEvents: function(callback) {
+            this.getJSON('github.json', callback);
+        },
+        getLatestStackOverflowQuestions: function(callback) {
+            this.getJSON('stackoverflow.json', callback);
+        },
+        getLatestRedditEntries: function(callback) {
+            this.getJSON('reddit.json', callback);
+        },
+        getJSON: function(json, callback) {
+            Ember.$.getJSON('/test_sources/' + json, callback);
+        }
+    });
+} else {
+    Dashboard.dataSource = Dashboard.DataSource.create();
+}
 
+// create da controllers
+Dashboard.redditController = Dashboard.RedditController.create({
+    dataSourceBinding: 'Dashboard.dataSource'
+});
+Dashboard.githubEventsController = Dashboard.GitHubController.create({
+    dataSourceBinding: 'Dashboard.dataSource'
+});
+Dashboard.questionsController = Dashboard.StackOverflowController.create({
+    dataSourceBinding: 'Dashboard.dataSource'
+});
+Dashboard.tweetsController = Dashboard.TwitterController.create({
+    dataSourceBinding: 'Dashboard.dataSource'
+});
+
+Ember.run.sync();
+
+// fetch initial data
 Dashboard.githubEventsController.loadLatestEvents();
 Dashboard.tweetsController.loadLatestTweets();
 Dashboard.questionsController.loadLatestQuestions();
 Dashboard.redditController.loadLatestEntries();
 
+// create da views
 Ember.View.create({
     tweetsBinding: 'Dashboard.tweetsController',
     templateName: 'dashboard/~templates/tweets'
