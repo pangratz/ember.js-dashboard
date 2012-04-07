@@ -1,7 +1,7 @@
 <ul class="unstyled timeline">
 	{{#each events}}
 		{{ago "created_at"}}:
-		{{view DB.EventView tagName="li" eventBinding="this" }}
+		{{view D.EventView tagName="li" eventBinding="this" }}
 	{{else}}
 		loading latest events on GitHub
 	{{/each}}
