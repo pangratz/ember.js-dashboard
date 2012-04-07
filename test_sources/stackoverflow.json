@@ -1,0 +1,217 @@
+{
+    "items": [{
+        "question_id": 10048691,
+        "last_edit_date": 1333746525,
+        "creation_date": 1333742816,
+        "last_activity_date": 1333746525,
+        "score": 0,
+        "answer_count": 1,
+        "title": "Headless testing Ember application with guard and jasmine",
+        "tags": ["emberjs", "jasmine", "phantomjs"],
+        "view_count": 9,
+        "owner": {
+            "user_id": 1259390,
+            "display_name": "jrabary",
+            "reputation": 6,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/ab64211b24abeb1e283c0ea1326d6ad0?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/1259390/jrabary",
+            "accept_rate": 0
+        },
+        "link": "http://stackoverflow.com/questions/10048691/headless-testing-ember-application-with-guard-and-jasmine",
+        "is_answered": false
+    },
+    {
+        "question_id": 10047447,
+        "creation_date": 1333736006,
+        "last_activity_date": 1333745211,
+        "score": 0,
+        "answer_count": 1,
+        "title": "Binding to a nested model in Ember.js",
+        "tags": ["javascript", "emberjs"],
+        "view_count": 15,
+        "owner": {
+            "user_id": 1293561,
+            "display_name": "sirvine",
+            "reputation": 1,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/31654782c71cfd0073e7c7394815e299?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/1293561/sirvine"
+        },
+        "link": "http://stackoverflow.com/questions/10047447/binding-to-a-nested-model-in-ember-js",
+        "is_answered": false
+    },
+    {
+        "question_id": 9991749,
+        "last_edit_date": 1333526671,
+        "creation_date": 1333450277,
+        "last_activity_date": 1333742528,
+        "score": 5,
+        "answer_count": 1,
+        "title": "Delete created uncommited record?",
+        "tags": ["emberjs", "emberdata"],
+        "view_count": 46,
+        "owner": {
+            "user_id": 219931,
+            "display_name": "Dziamid",
+            "reputation": 2159,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/3430e60d8dd7c8d8d2b0c377e0c6cc57?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/219931/dziamid",
+            "accept_rate": 92
+        },
+        "link": "http://stackoverflow.com/questions/9991749/delete-created-uncommited-record",
+        "is_answered": false
+    },
+    {
+        "question_id": 10046699,
+        "creation_date": 1333731967,
+        "last_activity_date": 1333735105,
+        "score": 1,
+        "answer_count": 1,
+        "title": "Has anyone successfully integrated Ember.js - Phonegap (and jQuery Mobile)?",
+        "tags": ["ios", "phonegap", "emberjs", "cordova"],
+        "view_count": 18,
+        "owner": {
+            "user_id": 359104,
+            "display_name": "Zack",
+            "reputation": 597,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/0d2643856090c41deef2b021c93764b3?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/359104/zack",
+            "accept_rate": 94
+        },
+        "link": "http://stackoverflow.com/questions/10046699/has-anyone-successfully-integrated-ember-js-phonegap-and-jquery-mobile",
+        "is_answered": true
+    },
+    {
+        "question_id": 10045619,
+        "creation_date": 1333726203,
+        "last_activity_date": 1333727370,
+        "score": 1,
+        "answer_count": 1,
+        "title": "Controller Strategy / Garbage Collection (destroy)",
+        "tags": ["emberjs"],
+        "view_count": 28,
+        "owner": {
+            "user_id": 130221,
+            "display_name": "Nick Franceschina",
+            "reputation": 847,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/19f7f12138e2a60930b56253e6f54b11?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/130221/nick-franceschina",
+            "accept_rate": 95
+        },
+        "link": "http://stackoverflow.com/questions/10045619/controller-strategy-garbage-collection-destroy",
+        "is_answered": true
+    },
+    {
+        "question_id": 10002737,
+        "creation_date": 1333494362,
+        "last_activity_date": 1333719471,
+        "score": 0,
+        "answer_count": 2,
+        "title": "emberjs: when I try to use the action helper, i get - Handlebars error: Could not find property &#39;action&#39; on object",
+        "tags": ["emberjs"],
+        "view_count": 46,
+        "owner": {
+            "user_id": 1311561,
+            "display_name": "Robert Beaupre",
+            "reputation": 1,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/3b449142aef0ee76ee7e09396b6805dc?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/1311561/robert-beaupre"
+        },
+        "link": "http://stackoverflow.com/questions/10002737/emberjs-when-i-try-to-use-the-action-helper-i-get-handlebars-error-could-no",
+        "is_answered": true
+    },
+    {
+        "question_id": 9445676,
+        "last_edit_date": 1330206430,
+        "creation_date": 1330186510,
+        "last_activity_date": 1333719455,
+        "score": 1,
+        "answer_count": 2,
+        "accepted_answer_id": 9450608,
+        "title": "Computed property being observed doesn&#39;t fire if changed twice in a row",
+        "tags": ["emberjs"],
+        "view_count": 87,
+        "owner": {
+            "user_id": 88170,
+            "display_name": "thedesertfox",
+            "reputation": 131,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/0e0476bc1ab931a7382caae4fa7a537f?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/88170/thedesertfox",
+            "accept_rate": 73
+        },
+        "link": "http://stackoverflow.com/questions/9445676/computed-property-being-observed-doesnt-fire-if-changed-twice-in-a-row",
+        "is_answered": true
+    },
+    {
+        "question_id": 10043951,
+        "creation_date": 1333717838,
+        "last_activity_date": 1333719181,
+        "score": 1,
+        "answer_count": 2,
+        "accepted_answer_id": 10044059,
+        "title": "Ember.js init behaviour",
+        "tags": ["javascript", "emberjs"],
+        "view_count": 13,
+        "owner": {
+            "user_id": 172439,
+            "display_name": "spacevillain",
+            "reputation": 412,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/37c374a1516b645b0ee0e6363c82d887?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/172439/spacevillain",
+            "accept_rate": 64
+        },
+        "link": "http://stackoverflow.com/questions/10043951/ember-js-init-behaviour",
+        "is_answered": true
+    },
+    {
+        "question_id": 10043451,
+        "creation_date": 1333715112,
+        "last_activity_date": 1333716683,
+        "score": 3,
+        "answer_count": 1,
+        "accepted_answer_id": 10043731,
+        "title": "Ember.ArrayProxy changes not triggering handlebars #each update",
+        "tags": ["emberjs"],
+        "view_count": 14,
+        "owner": {
+            "user_id": 993270,
+            "display_name": "alexrothenberg",
+            "reputation": 18,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/f4252ea05ddfbeb7b1803e9941ea46aa?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/993270/alexrothenberg"
+        },
+        "link": "http://stackoverflow.com/questions/10043451/ember-arrayproxy-changes-not-triggering-handlebars-each-update",
+        "is_answered": true
+    },
+    {
+        "question_id": 10040339,
+        "creation_date": 1333696437,
+        "last_activity_date": 1333700173,
+        "score": 2,
+        "answer_count": 1,
+        "title": "Ember Views, Handlebars and jQuery Effects",
+        "tags": ["emberjs"],
+        "view_count": 25,
+        "owner": {
+            "user_id": 996265,
+            "display_name": "mike",
+            "reputation": 43,
+            "user_type": "registered",
+            "profile_image": "http://www.gravatar.com/avatar/dbc7ce5d92647532b49bbed08a75cfca?d=identicon&r=PG",
+            "link": "http://stackoverflow.com/users/996265/mike"
+        },
+        "link": "http://stackoverflow.com/questions/10040339/ember-views-handlebars-and-jquery-effects",
+        "is_answered": true
+    }],
+    "quota_remaining": 261,
+    "quota_max": 300,
+    "has_more": true
+}
