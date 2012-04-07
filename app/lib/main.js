@@ -3,9 +3,9 @@ require('dashboard/controllers');
 require('dashboard/views');
 
 Dashboard.redditController = Dashboard.RedditController.create();
-Dashboard.githubEventsController = Dashboard.GitHubEventsController.create();
-Dashboard.questionsController = Dashboard.QuestionsController.create();
-Dashboard.tweetsController = Dashboard.TweetsController.create();
+Dashboard.githubEventsController = Dashboard.GitHubController.create();
+Dashboard.questionsController = Dashboard.StackOverflowController.create();
+Dashboard.tweetsController = Dashboard.TwitterController.create();
 
 Dashboard.githubEventsController.loadLatestEvents();
 Dashboard.tweetsController.loadLatestTweets();

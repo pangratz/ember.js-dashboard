@@ -1,4 +1,3 @@
-require('dashboard/core');
 require('dashboard/views');
 
 module("Dashboard.ActorView");

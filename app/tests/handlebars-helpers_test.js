@@ -1,4 +1,3 @@
-require('dashboard/core');
 require('dashboard/handlebars-helpers');
 
 module("{{echo}}");

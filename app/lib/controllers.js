@@ -11,7 +11,7 @@ Dashboard.RedditController = Ember.ArrayProxy.extend({
     }
 });
 
-Dashboard.GitHubEventsController = Ember.ArrayProxy.extend({
+Dashboard.GitHubController = Ember.ArrayProxy.extend({
     content: [],
     loadLatestEvents: function() {
         var that = this;
@@ -22,7 +22,7 @@ Dashboard.GitHubEventsController = Ember.ArrayProxy.extend({
     }
 });
 
-Dashboard.QuestionsController = Ember.ArrayProxy.extend({
+Dashboard.StackOverflowController = Ember.ArrayProxy.extend({
     content: [],
     loadLatestQuestions: function() {
         var that = this;
@@ -33,7 +33,7 @@ Dashboard.QuestionsController = Ember.ArrayProxy.extend({
     }
 });
 
-Dashboard.TweetsController = Ember.ArrayProxy.extend({
+Dashboard.TwitterController = Ember.ArrayProxy.extend({
     content: [],
     loadLatestTweets: function() {
         var that = this;
