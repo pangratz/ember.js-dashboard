@@ -10,5 +10,5 @@ function() {
 
 test("has a method for getting latest Tweets",
 function() {
-    ok(Dashboard.DataSource.getLatestTweets, "method exists");
+    ok(Dashboard.DataSource.create().getLatestTweets, "method exists");
 });
