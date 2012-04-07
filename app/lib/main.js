@@ -3,6 +3,8 @@ require('dashboard/controllers');
 require('dashboard/views');
 require('dashboard/datasource');
 
+// this is for testing purpose: if you add ?fixtures=true to your local url,
+// the pre-fetched sources are used and so you don't waste API calls during development
 if (window.location.search.indexOf('fixtures') !== -1) {
     Dashboard.dataSource = Dashboard.DataSource.create({
         getLatestTweets: function(callback) {
