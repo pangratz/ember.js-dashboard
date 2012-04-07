@@ -1,5 +1,7 @@
 div.container-fluid > h1 {
   color: #CD4F1A;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #FFF, 3px 3px 0px #CD4F1A;
 }
 
 li {
