@@ -13,6 +13,7 @@ task :deploy do
   `rm -rf build`
   `mkdir build`
   origin = `git config remote.origin.url`.chomp
+  ENV["RAKEP_MODE"] = "production"
   Rake::Task["build"].invoke
   Dir.chdir "build" do
     `git init`
