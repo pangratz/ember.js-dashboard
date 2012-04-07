@@ -1,4 +1,4 @@
-APPNAME = 'ember-skeleton'
+APPNAME = 'dashboard'
 
 require 'json'
 require 'rake-pipeline-web-filters'

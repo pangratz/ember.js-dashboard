@@ -1,5 +1,5 @@
-require('ember-skeleton/core');
-require('ember-skeleton/states/start');
+require('dashboard/core');
+require('dashboard/states/start');
 
 App.stateManager = Ember.StateManager.create({
 

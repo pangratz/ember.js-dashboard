@@ -1,6 +1,6 @@
 // require('sproutcore-routing');
 
-require('ember-skeleton/core');
+require('dashboard/core');
 
 App.routes = {
 

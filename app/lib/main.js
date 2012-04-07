@@ -1,4 +1,4 @@
-require('ember-skeleton/core');
+require('dashboard/core');
 
 Ember.Handlebars.registerHelper('echo',
 function(propertyName, options) {

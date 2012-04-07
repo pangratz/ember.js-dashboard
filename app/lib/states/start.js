@@ -1,4 +1,4 @@
-require('ember-skeleton/core');
+require('dashboard/core');
 
 App.StartState = Ember.ViewState.extend({
 
