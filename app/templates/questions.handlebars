@@ -2,12 +2,19 @@
   {{#each questions}}
     {{ago "last_activity_date" isSeconds=true}}
     <li>
-      <strong>{{score}}</strong> <i class="icon-chevron-up" title="upvotes" ></i> /
-      <strong>{{answer_count}}</strong> <i class="icon-comment" title="answers" ></i> - 
-      <a {{bindAttr href="link"}} >{{{title}}}</a>
-      {{#if is_answered}}
-        <i class="icon-ok" title="answered" ></i>
-      {{/if}}
+      <div>
+        <strong>{{score}}</strong> <i class="icon-chevron-up" title="upvotes" ></i> /
+        <strong>{{answer_count}}</strong> <i class="icon-comment" title="answers" ></i> - 
+        <a {{bindAttr href="link"}} >{{{title}}}</a>
+        {{#if is_answered}}
+          <i class="icon-ok" title="answered" ></i>
+        {{/if}}
+      </div>
+      <div>
+        {{#each tags}}
+          <span class="label">{{this}}</span>
+        {{/each}}
+      </div>
     </li>
   {{else}}
     loading latest questions on StackOverflow ...
