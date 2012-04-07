@@ -21,7 +21,7 @@ task :deploy do
     `git checkout -b gh-pages`
     `cp ../index.html .`
     `cp -r ../assets .`
-    `rm app-tests.js`
+    `rm assets/app-tests.js`
     `git add .`
     `git commit -m 'Site updated at #{Time.now.utc}'`
     `git push -f origin gh-pages`
