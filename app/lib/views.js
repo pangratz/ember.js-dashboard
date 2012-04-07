@@ -12,7 +12,7 @@ Dashboard.ActorView = Ember.View.extend({
 Dashboard.EventView = Ember.View.extend({
     templateName: function() {
         var type = Ember.getPath(this, 'event.type');
-        return 'dashboard/~templates/%@-template'.fmt(type);
+        return 'dashboard/~templates/github/%@-template'.fmt(type);
     }.property('event.type').cacheable(),
 
     _templateNameChanged: function() {
