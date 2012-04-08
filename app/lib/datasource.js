@@ -2,7 +2,7 @@ require('dashboard/core');
 
 Dashboard.DataSource = Ember.Object.extend({
     getLatestTweets: function(callback) {
-        Ember.$.getJSON('http://search.twitter.com/search.json?callback=?&q=emberjs', callback);
+        Ember.$.getJSON('http://search.twitter.com/search.json?callback=?&q=ember.js%20OR%20emberjs', callback);
     },
 
     getLatestStackOverflowQuestions: function(callback) {
