@@ -14,7 +14,7 @@ Pull Requests are **very** welcome! Questions? Find me on Twitter @pangratz.
 
 ## Deploy your own dashboard
 
-There is a `deploy` task in the `Rakefile`. Simply execute `bundle exec rake deploy` and the dashboard will be pushed to the `gh-pages` branch in your `ember.js-dashboard` repository, which is afterwards available via `https://YOURSELF.github.com/ember.js-dashboard` ...
+There is a `deploy` task in the `Rakefile`. Simply execute `bundle exec rake deploy` and the dashboard will be pushed to the `gh-pages` branch in your `ember.js-dashboard` repository, which is afterwards available via `http://YOURSELF.github.com/ember.js-dashboard` ...
 
 
 ----
