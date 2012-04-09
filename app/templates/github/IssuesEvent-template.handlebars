@@ -1,2 +1,4 @@
-{{view D.ActorView actorBinding="event.actor"}}
-{{event.payload.action}} issue <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>
+{{#view ActorView}}
+  {{event.payload.action}} issue
+  <a {{bindAttr href="event.payload.issue.html_url"}}>#{{event.payload.issue.number}}</a>
+{{/view}}

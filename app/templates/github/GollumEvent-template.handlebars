@@ -1,4 +1,8 @@
-{{view D.ActorView actorBinding="event.actor"}} modified the <a href="https://github.com/emberjs/ember.js/wiki">wiki</a> <br/>
-{{#each event.payload.pages }}
-  <span>{{echo "action"}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
-{{/each}}
+{{#view ActorView}}
+  modified the <a href="https://github.com/emberjs/ember.js/wiki">wiki</a>
+{{/view}}
+<div class="additional-info" >
+  {{#each event.payload.pages }}
+    <span>{{echo "action"}} <a {{bindAttr href="html_url"}}>{{page_name}}</a></span>
+  {{/each}}
+</div>

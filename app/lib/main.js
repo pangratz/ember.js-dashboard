@@ -67,5 +67,5 @@ Ember.View.create({
 
 Ember.View.create({
     entriesBinding: 'Dashboard.redditController',
-    templateName: 'dashboard/~templates/reddit'
+    templateName: 'dashboard/~templates/reddits'
 }).replaceIn('.reddit');

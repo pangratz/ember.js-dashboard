@@ -1,2 +1,3 @@
-{{view D.ActorView actorBinding="event.actor"}} created download
-<a {{bindAttr href="event.payload.download.html_url"}} >{{event.payload.download.name}}</a>
+{{#view ActorView}}
+  created download <a {{bindAttr href="event.payload.download.html_url"}} >{{event.payload.download.name}}</a>
+{{/view}}

@@ -26,3 +26,10 @@ function(propertyName, options) {
     }
     return moment(new Date(timestamp)).fromNow();
 });
+
+Ember.Handlebars.registerHelper('event',
+function(path, options) {
+    var eventType = Ember.getPath(options.contexts[0], 'TYPE');
+    var viewClass = 'Dashboard.%@View'.fmt(eventType);
+    return Ember.Handlebars.ViewHelper.helper(this, viewClass, options);
+});

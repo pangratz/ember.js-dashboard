@@ -13,3 +13,24 @@ li {
   padding: 0.5em;
   border: 1px solid #E1E1E8;
 }
+
+.profilePic {
+  float: left;
+  margin: 3px;
+  margin-right: 10px;
+}
+
+.profilePic > img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.info {
+  float: left;
+}
+
+div.additional-info {
+  margin-left: 5px;
+  margin-top: 5px;
+}

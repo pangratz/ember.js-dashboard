@@ -1,2 +1,4 @@
-{{view D.ActorView actorBinding="event.actor"}} forked repo
-<a {{bindAttr href="event.payload.forkee.html_url"}}>{{event.actor.login}}/{{event.payload.forkee.name}}</a>
+{{#view ActorView}}
+  forked
+  <a {{bindAttr href="event.payload.forkee.html_url"}}>repository</a>
+{{/view}}

@@ -1,7 +1,7 @@
 <ul class="unstyled timeline">
-  {{#each tweets}}
+  {{#each entries}}
     {{event Dashboard.EventView eventBinding="this"}}
   {{else}}
-    loading latest Tweets ...
+    loading latest reddit entries ...
   {{/each}}
 </ul>

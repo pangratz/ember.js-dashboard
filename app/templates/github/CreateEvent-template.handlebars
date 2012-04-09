@@ -1,4 +1,6 @@
-{{view D.ActorView actorBinding="event.actor"}} created {{event.payload.ref_type}}
-{{#if event.payload.ref}}
-  <a href="https://github.com/{{unbound event.repo.name}}/tree/{{unbound event.payload.ref}}">{{event.payload.ref}}</a>
-{{/if}}
+{{#view ActorView}} created {{event.payload.ref_type}}{{/view}}
+<div class="additional-info" >
+  {{#if event.payload.ref}}
+    <a href="https://github.com/{{unbound event.repo.name}}/tree/{{unbound event.payload.ref}}">{{event.payload.ref}}</a>
+  {{/if}}
+</div>
