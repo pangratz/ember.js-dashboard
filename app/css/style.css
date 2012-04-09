@@ -27,7 +27,7 @@ li {
 }
 
 .info {
-  float: left;
+  float: none;
 }
 
 div.additional-info {
