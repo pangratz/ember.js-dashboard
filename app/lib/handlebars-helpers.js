@@ -33,3 +33,13 @@ function(path, options) {
     var viewClass = 'Dashboard.%@View'.fmt(eventType);
     return Ember.Handlebars.ViewHelper.helper(this, viewClass, options);
 });
+
+Ember.Handlebars.registerHelper('trim',
+function(path, options) {
+    var length = options.hash.length;
+    var string = Ember.getPath(options.contexts[0], path);
+    if (length) {
+        string = string.substring(0, length);
+    }
+    return new Handlebars.SafeString(string);
+});
