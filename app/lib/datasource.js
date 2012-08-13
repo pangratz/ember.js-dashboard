@@ -6,7 +6,7 @@ Dashboard.DataSource = Ember.Object.extend({
     },
 
     getLatestStackOverflowQuestions: function(callback) {
-        Ember.$.getJSON('https://api.stackexchange.com/2.0/search?pagesize=20&order=desc&sort=activity&tagged=emberjs&site=stackoverflow&callback=?', callback);
+        Ember.$.getJSON('https://api.stackexchange.com/2.0/search?pagesize=20&order=desc&sort=activity&tagged=ember.js&site=stackoverflow&callback=?', callback);
     },
 
     getLatestRedditEntries: function(callback) {
