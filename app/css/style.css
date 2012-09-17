@@ -14,6 +14,16 @@ li {
   padding: 0.5em;
   border: 1px solid #E1E1E8;
 }
+*/
+body {
+  background: url(/assets/img/background.png);
+  font-family: "Lato", sans-serif;
+}
+a {
+  color: #E1563F;
+  text-decoration: none !important;
+}
+a:hover { color: #E1563F; }
 
 .profilePic {
   float: left;
@@ -35,8 +45,29 @@ div.additional-info {
   margin-left: 5px;
   margin-top: 5px;
 }
-*/
+
+.timeline-header {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  color: #252525;
+}
+.timeline-header a { color: #252525; }
+.timeline-header a:after {
+  content: " →";
+  color: #bbb;
+}
+.timeline.header a:hover:after {
+  color: #E1563F;
+}
 
 .timeline-point {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 7px;
   margin-bottom: 1em;
+  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1)
 }
