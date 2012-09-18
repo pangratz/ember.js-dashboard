@@ -1,36 +1,33 @@
-/*
-div.container-fluid > h1 {
-  color: #CD4F1A;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 0px #FFF, 3px 3px 0px #CD4F1A;
-}
-
-li {
-  background-color: #F7F7F9;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 1em;
-  padding: 0.5em;
-  border: 1px solid #E1E1E8;
-}
-*/
 body {
   background: url(/assets/img/background.png);
   font-family: "Lato", sans-serif;
 }
+
 a {
   color: #E1563F;
   text-decoration: none !important;
 }
-a:hover { color: #E1563F; }
+a:hover { color: #cd371d; }
+
+header {
+  background: url(/assets/img/navigation_background.png);
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
+  margin-bottom: 1em;
+}
+h1 { 
+  color: #fff;
+  font-family: "Maven Pro", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  padding: 12px 0; 
+}
 
 .profilePic {
   float: left;
   margin: 3px;
   margin-right: 10px;
 }
-
 .profilePic > img {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -55,12 +52,10 @@ div.additional-info {
   color: #252525;
 }
 .timeline-header a { color: #252525; }
-.timeline-header a:after {
-  content: " →";
-  color: #bbb;
-}
-.timeline.header a:hover:after {
-  color: #E1563F;
+
+.timeline-time {
+  color: #999;
+  font-size: 11px;
 }
 
 .timeline-point {
@@ -70,4 +65,8 @@ div.additional-info {
   padding: 7px;
   margin-bottom: 1em;
   box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1)
+}
+
+.timeline-point .tags {
+  margin-top: .5em;
 }

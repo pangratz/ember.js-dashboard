@@ -1,7 +1,7 @@
 require('dashboard/core');
 
 Dashboard.EventView = Ember.View.extend({
-    layout: Ember.Handlebars.compile('{{timeAgoString}} <li class="timeline-point">{{yield}}</li>'),
+    layout: Ember.Handlebars.compile('<span class="timeline-time">{{timeAgoString}}</span> <li class="timeline-point">{{yield}}</li>'),
     defaultTemplate: Ember.Handlebars.compile('{{event.TYPE}}'),
     classNameBindings: 'event.TYPE'.w(),
     timestampProperty: 'event.created_at',
