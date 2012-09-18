@@ -1,5 +1,5 @@
 body {
-  background: url(/assets/img/background.png);
+  background: url(../assets/img/background.png);
   font-family: "Lato", sans-serif;
 }
 
@@ -10,7 +10,7 @@ a {
 a:hover { color: #cd371d; }
 
 header {
-  background: url(/assets/img/navigation_background.png);
+  background: url(../assets/img/navigation_background.png);
   height: 60px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
   -mox-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
@@ -68,7 +68,7 @@ div.additional-info {
 
 .timeline-point {
   background-color: #fff;
-  background: url(/assets/img/code_background.gif);
+  background: url(../assets/img/code_background.gif);
   border: 1px solid #d1d1d1;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
