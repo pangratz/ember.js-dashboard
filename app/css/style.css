@@ -12,15 +12,23 @@ a:hover { color: #cd371d; }
 header {
   background: url(/assets/img/navigation_background.png);
   height: 60px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
+  -mox-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
   margin-bottom: 1em;
 }
 h1 { 
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Maven Pro", sans-serif;
+  font-size: 26px;
   text-transform: uppercase;
-  text-shadow: 0 2px rgba(0, 0, 0, 0.2);
-  padding: 12px 0; 
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+  padding-top: 15px;
+}
+h1 img {
+  position: relative;
+  top: -12px;
+  margin-right: 7px;
 }
 
 .profilePic {
@@ -62,10 +70,14 @@ div.additional-info {
   background-color: #fff;
   background: url(/assets/img/code_background.gif);
   border: 1px solid #d1d1d1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 7px;
   margin-bottom: 1em;
-  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1)
+  -webkit-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-stats {
@@ -77,5 +89,5 @@ div.additional-info {
 }
 .timeline-point .label {
   background-color: #ccc;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25)
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
