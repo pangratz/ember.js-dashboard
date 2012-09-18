@@ -1,12 +1,12 @@
 {{#with event}}
-  <div>
+  <div class="timeline-stats">
     <strong>{{score}}</strong> <i class="icon-chevron-up" title="upvotes" ></i> /
     <strong>{{answer_count}}</strong> <i class="icon-comment" title="answers" ></i> - 
-    <a {{bindAttr href="link"}} >{{{title}}}</a>
     {{#if accepted_answer_id}}
       <i class="icon-ok" title="has accepted answer" ></i>
     {{/if}}
   </div>
+    <a {{bindAttr href="link"}} >{{{title}}}</a>
   <div class="tags">
     {{#each tags}}
       <span class="label">{{this}}</span>

@@ -60,6 +60,7 @@ div.additional-info {
 
 .timeline-point {
   background-color: #fff;
+  background: url(/assets/img/code_background.gif);
   border: 1px solid #d1d1d1;
   border-radius: 5px;
   padding: 7px;
@@ -67,6 +68,14 @@ div.additional-info {
   box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1)
 }
 
+.timeline-stats {
+  margin-bottom: .5em;
+}
+
 .timeline-point .tags {
   margin-top: .5em;
+}
+.timeline-point .label {
+  background-color: #ccc;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25)
 }

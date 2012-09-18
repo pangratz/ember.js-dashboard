@@ -1,8 +1,10 @@
 {{#with event}}
-  <strong>{{ups}}</strong> <i class="icon-chevron-up" title="upvotes" ></i> - 
-  <strong>{{author}}</strong>
+  <div class="timeline-stats">
+    <strong>{{ups}}</strong> <i class="icon-chevron-up" title="upvotes" ></i> / 
+    <a href="http://www.reddit.com{{unbound permalink}}">
+      {{num_comments}}
+    </a><i class="icon-comment" title="comments" ></i> - 
+    <strong>{{author}}</strong>
+  </div>
   <a {{bindAttr href="url"}} >{{title}}</a> - 
-  <a href="http://www.reddit.com{{unbound permalink}}">
-    {{num_comments}}
-  </a><i class="icon-comment" title="comments" ></i>
 {{/with}}
