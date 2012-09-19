@@ -62,19 +62,18 @@ div.additional-info {
 .timeline-header a { color: #252525; }
 
 .timeline-time {
-  color: #999;
+  color: #888;
   font-size: 11px;
 }
 
 .timeline-point {
   background-color: #fff;
-  background: url(../assets/img/code_background.gif);
-  border: 1px solid #d1d1d1;
+  border: 1px solid #bbb;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 7px;
-  margin-bottom: 1em;
+  padding: 8px;
+  margin-bottom: 1.25em;
   -webkit-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
@@ -88,6 +87,6 @@ div.additional-info {
   margin-top: .5em;
 }
 .timeline-point .label {
-  background-color: #ccc;
+  background-color: #bbb;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
