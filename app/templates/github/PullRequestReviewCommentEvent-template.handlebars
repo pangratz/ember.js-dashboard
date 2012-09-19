@@ -1,6 +1,6 @@
 {{#view ActorView}}
   reviewed on commit
-  <a href="https://github.com/{{unbound event.repo.name}}/commit/{{unbound event.payload.comment.commit_id}}#commitcomment-{{unbound event.payload.comment.id}}">
+  <a {{bindAttr href="event.payload.comment._links.html.href"}}>
     {{trim event.payload.comment.commit_id length=7}}
   </a>
 {{/view}}
