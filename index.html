@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Ember.js Dashboard</title>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript">
 
@@ -21,23 +23,25 @@
     <a href="https://github.com/pangratz/ember.js-dashboard">
       <img style="position: absolute; top: 0; right: 0; border: 0;" src="assets/img/fork_me_ribbon.png" alt="Fork me on GitHub">
     </a>
+    <header>
+    <h1 class="container-fluid"><img src="assets/img/ember_logo.png">Dashboard</h1>
+    </header>
     <div class="container-fluid">
-      <h1>Ember.js Dashboard</h1>
       <div class="row-fluid">
         <div class="span3">
-          <h2><a href="http://twitter.com/#!/search/realtime/emberjs">Twitter</a></h2>
+          <h2 class="timeline-header"><a href="http://twitter.com/#!/search/realtime/emberjs">Twitter</a></h2>
           <div class="tweets" >loading latest Tweets ...</div>
         </div>
         <div class="span3">
-          <h2><a href="https://github.com/emberjs/ember.js">GitHub</a></h2>
+          <h2 class="timeline-header"><a href="https://github.com/emberjs/ember.js">GitHub</a></h2>
           <div class="github" >loading latest events on GitHub</div>
         </div>
         <div class="span3">
-          <h2><a href="http://stackoverflow.com/questions/tagged/emberjs">StackOverflow</a></h2>
+          <h2 class="timeline-header"><a href="http://stackoverflow.com/questions/tagged/emberjs">StackOverflow</a></h2>
           <div class="stackoverflow" >loading latest questions on StackOverflow ...</div>
         </div>
         <div class="span3">
-          <h2><a href="http://www.reddit.com/r/emberjs/">r/emberjs</a></h2>
+          <h2 class="timeline-header"><a href="http://www.reddit.com/r/emberjs/">r/emberjs</a></h2>
           <div class="reddit" >loading latest reddit entries ...</div>
         </div>
       </div>
